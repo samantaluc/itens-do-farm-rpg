@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleção de Sementes</title>
+  <script>
+    function exibirInformacoesSemente() {
+      var tipoSemente = document.getElementById("tipoSemente").value;
+      var estacao, tempoColher, percentualPerda, custoSemente, valorVenda, colheitaUnica;
+
+      // Defina as informações com base no tipo de semente selecionado
+      switch (tipoSemente) {
+        case "semente1":
+          estacao = "Verão";
+          tempoColher = "10 dias";
+          percentualPerda = "5%";
+          custoSemente = "10";
+          valorVenda = "2";
+          colheitaUnica = true;
+          break;
+        // Adicione mais casos conforme necessário para outros tipos de semente
+
+        default:
+          estacao = tempoColher = percentualPerda = custoSemente = valorVenda = colheitaUnica = "";
+          break;
+      }
+
+      // Exiba as informações na página
+      document.getElementById("infoEstacao").innerText = "Estação: " + estacao;
+      document.getElementById("infoTempoColher").innerText = "Tempo para colher: " + tempoColher;
+      document.getElementById("infoPercentualPerda").innerText = "Percentual de perda: " + percentualPerda;
+      document.getElementById("infoCustoSemente").innerText = "Custo do pacote de semente (20 unidades): $" + custoSemente;
+      document.getElementById("infoValorVenda").innerText = "Valor de venda por fruta/legume: $" + valorVenda;
+      document.getElementById("infoColheitaUnica").innerText = "Colheita única ou produz mais depois da primeira colheita? " + (colheitaUnica ? "Colheita única" : "Produz mais");
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Seleção de Sementes</h1>
+
+  <label for="tipoSemente">Selecione o tipo de semente:</label>
+  <select id="tipoSemente" onchange="exibirInformacoesSemente()">
+    <option value="semente1">Semente 1</option>
+    <!-- Adicione mais opções conforme necessário para outros tipos de semente -->
+  </select>
+
+  <div id="informacoesSemente">
+    <p id="infoEstacao"></p>
+    <p id="infoTempoColher"></p>
+    <p id="infoPercentualPerda"></p>
+    <p id="infoCustoSemente"></p>
+    <p id="infoValorVenda"></p>
+    <p id="infoColheitaUnica"></p>
+  </div>
+
+</body>
+</html>

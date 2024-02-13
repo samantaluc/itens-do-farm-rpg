@@ -1,0 +1,33 @@
+body {
+  background-color: #f5f5dc; /* Creme claro */
+  color: #000; /* Texto preto */
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  color: #000080; /* Azul escuro */
+}
+
+label {
+  color: #000080; /* Azul escuro */
+}
+
+select {
+  width: 200px;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #000080; /* Azul escuro */
+  border-radius: 5px;
+  background-color: #fff; /* Branco */
+  color: #000080; /* Azul escuro */
+}
+
+#informacoesSemente {
+  background-color: #fff; /* Branco */
+  border: 1px solid #000080; /* Azul escuro */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Adicione mais estilos conforme necessário */

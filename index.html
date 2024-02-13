@@ -11,18 +11,32 @@
 
       // Defina as informações com base no tipo de semente selecionado
       switch (tipoSemente) {
-        case "semente1":
+       case "tomateSolar":
           estacao = "Verão";
           tempoColher = "10 dias";
           percentualPerda = "5%";
-          custoSemente = "10";
-          valorVenda = "2";
-          colheitaUnica = true;
+          custoSemente = "$30";
+          valorVenda = "$3";
+          colheitaUnica = false;
+          break;
+
+        case "pimentaoFlamejante":
+          estacao = "Verão";
+          tempoColher = "12 dias";
+          percentualPerda = "7%";
+          custoSemente = "$40";
+          valorVenda = "$4";
+          colheitaUnica = false;
           break;
         // Adicione mais casos conforme necessário para outros tipos de semente
 
         default:
-          estacao = tempoColher = percentualPerda = custoSemente = valorVenda = colheitaUnica = "";
+          estacao = "";
+          tempoColher = "";
+          percentualPerda = "";
+          custoSemente = "";
+          valorVenda = "";
+          colheitaUnica = false;
           break;
       }
 
@@ -43,8 +57,8 @@
   <label for="tipoSemente">Selecione o tipo de semente:</label>
   <select id="tipoSemente" onchange="exibirInformacoesSemente()">
     <option value="0">Escolha</option>
-    <option value="semente1">Semente 1</option>
-    <!-- Adicione mais opções conforme necessário para outros tipos de semente -->
+    <option value="tomateSolar">Tomate Solar</option>
+    <option value="pimentaoFlamejante">Pimentão Flamejante</option>
   </select>
 
   <div id="informacoesSemente">
